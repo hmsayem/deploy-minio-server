@@ -4,9 +4,7 @@
 ### Create self-signed SSL certificate
 #### Install onessl
 ```bash
-$ curl -fsSL -o onessl https://github.com/kubepack/onessl/releases/download/0.3.0/onessl-linux-amd64 \
-  && chmod +x onessl \
-  && sudo mv onessl /usr/local/bin/
+$ curl -fsSL -o onessl https://github.com/kubepack/onessl/releases/download/0.3.0/onessl-linux-amd64 && chmod +x onessl && sudo mv onessl /usr/local/bin/
 ```
 #### Generate CA’s root certificate
 ```bash
@@ -174,6 +172,6 @@ spec:
     s3:
       endpoint: 'https://minio-service.demo.svc' # Use your own Minio server address.
       bucket: stash-testing  # Give a name of the bucket where you want to backup.
-      prefix: demo/mongodb/sample-mongodb  # . Path prefix into bucket where repository will be created.(optional).
+      prefix: demo/mongodb/sample-mongodb  # Path prefix into bucket where repository will be created.(optional).
     storageSecretName: minio-restic-secret
 ```
