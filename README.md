@@ -13,7 +13,7 @@ onessl create ca-cert
 This will create two files `ca.crt` and `ca.key`.
 ####  Generate certificate
 ```bash
-onessl create server-cert --domains minio-service.default.svc
+onessl create server-cert --domains minio-service.demo.svc
 ```
 This will generate two files `server.crt` and `server.key`. Minio server will start TLS secure service if it find `public.crt` and `private.key` files in `/root/.minio/certs/ directory` of the docker container. The public.crt file is concatenation of `server.crt` and `ca.crt` where `private.key` file is only the `server.key` file.
 
