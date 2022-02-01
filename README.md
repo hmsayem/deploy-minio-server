@@ -172,6 +172,6 @@ spec:
     s3:
       endpoint: 'https://minio-service.demo.svc' # Use your own Minio server address.
       bucket: stash-testing  # Give a name of the bucket where you want to backup.
-      prefix: demo/mongodb/sample-mongodb  # Path prefix into bucket where repository will be created.(optional).
+      prefix: demo # Path prefix into bucket where repository will be created.(optional).
     storageSecretName: minio-restic-secret
 ```
