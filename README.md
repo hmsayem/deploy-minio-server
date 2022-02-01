@@ -30,7 +30,7 @@ Minio server will not trust a self-signed certificate by default. We can mark th
 
 ### Create Secret
 ```bash
-$ kubectl create secret generic minio-server-secret --from-file=./public.crt --from-file=./private.key
+$ kubectl create secret generic -n demo minio-server-secret --from-file=./public.crt --from-file=./private.key
 $ kubectl label secret minio-server-secret app=minio -n default
 ```
 ### Create Persistent Volume Claim
@@ -43,6 +43,7 @@ kind: PersistentVolumeClaim
 metadata:
   # This name uniquely identifies the PVC. Will be used in minio deployment.
   name: minio-pvc
+  namespace: demo
   labels:
     app: minio
 spec:
@@ -132,6 +133,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: minio-service
+  namespace: demo
   labels:
     app: minio
 spec:
