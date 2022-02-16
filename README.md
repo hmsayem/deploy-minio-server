@@ -1,5 +1,5 @@
 
-##  Deploy TLS secured Minio Server
+##  Deploy TLS secured Minio Server on Kubernetes
 
 ### Create self-signed SSL certificate
 #### Install onessl
