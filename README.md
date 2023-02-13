@@ -31,7 +31,7 @@ Minio server will not trust a self-signed certificate by default. We can mark th
 ### Create Secret
 ```bash
 $ kubectl create secret generic -n demo minio-server-secret --from-file=./public.crt --from-file=./private.key
-$ kubectl label secret minio-server-secret app=minio -n default
+$ kubectl label secret minio-server-secret app=minio -n demo
 ```
 ### Create Persistent Volume Claim
 Minio server needs a Persistent Volume to store data. Let’s create a Persistent Volume Claim to request Persistent Volume from the cluster.
